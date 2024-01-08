@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "fb422c21-6762-4a92-8f10-8d6c22d98b24",
+		"name": "Demo HRM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Case1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"variables\": {\r\n        \"action\": {\r\n            \"value\": \"FULL\",\r\n            \"type\": \"String\"\r\n        },\r\n        \"twoEyesApprovalAction\": {\r\n            \"value\": \"APPROVE\",\r\n            \"type\": \"String\"\r\n        },\r\n        \"existingPosition\": {\r\n            \"value\": false,\r\n            \"type\": \"Boolean\"\r\n        }\r\n    },\r\n    \"businessKey\": \"recruitment_001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/engine-rest/process-definition/key/recruitment/start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"engine-rest",
+						"process-definition",
+						"key",
+						"recruitment",
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Complete Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"businessKey\":\"recruitment_001\",\r\n    \"processDefinitionKey\": \"recruitment\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/engine-rest/custom-task/complete-current-task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"engine-rest",
+						"custom-task",
+						"complete-current-task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Case2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"variables\": {\r\n        \"action\": {\r\n            \"value\": \"LACK\",\r\n            \"type\": \"String\"\r\n        },\r\n        \"twoEyesApprovalAction\": {\r\n            \"value\": \"APPROVE\",\r\n            \"type\": \"String\"\r\n        },\r\n        \"existingPosition\": {\r\n            \"value\": false,\r\n            \"type\": \"Boolean\"\r\n        }\r\n    },\r\n    \"businessKey\": \"recruitment_002\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/engine-rest/process-definition/key/recruitment/start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"engine-rest",
+						"process-definition",
+						"key",
+						"recruitment",
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Case3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"variables\": {\r\n        \"action\": {\r\n            \"value\": \"FULL\",\r\n            \"type\": \"String\"\r\n        },\r\n        \"twoEyesApprovalAction\": {\r\n            \"value\": \"NOT_APPROVE\",\r\n            \"type\": \"String\"\r\n        },\r\n        \"existingPosition\": {\r\n            \"value\": false,\r\n            \"type\": \"Boolean\"\r\n        }\r\n    },\r\n    \"businessKey\": \"recruitment_003\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/engine-rest/process-definition/key/recruitment/start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"engine-rest",
+						"process-definition",
+						"key",
+						"recruitment",
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Case4",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"variables\": {\r\n        \"action\": {\r\n            \"value\": \"FULL\",\r\n            \"type\": \"String\"\r\n        },\r\n        \"twoEyesApprovalAction\": {\r\n            \"value\": \"APPROVE\",\r\n            \"type\": \"String\"\r\n        },\r\n        \"existingPosition\": {\r\n            \"value\": true,\r\n            \"type\": \"Boolean\"\r\n        }\r\n    },\r\n    \"businessKey\": \"recruitment_004\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/engine-rest/process-definition/key/recruitment/start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"engine-rest",
+						"process-definition",
+						"key",
+						"recruitment",
+						"start"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
